@@ -14,8 +14,7 @@
   <script>
     function myFunction() {
  if (window.freighterApi.isConnected()) {
-  alert("User has Freighter!");
-}
+  
 
 const retrievePublicKey = async () => {
   let publicKey = "";
@@ -36,6 +35,8 @@ const retrievePublicKey = async () => {
 
 const result = retrievePublicKey();
 	    document.getElementById("demo").innerHTML = result;
+	 
+}
     }
   </script>
 </html>
