@@ -1,3 +1,21 @@
 <html>
+  <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/1.1.2/index.min.js"></script>
+  </head>
+  
+  
+  <body>
+    
+    <p id="demo"></p>
+									<button onclick="myFunction()">Click me</button>
+    
+  </body>
+  <script>
+    function myFunction() {
+		
+		if (window.freighterApi.isConnected()) {
+  alert("User has Freighter!");
+}
+  </script>
 </html>
