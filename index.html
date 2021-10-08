@@ -28,13 +28,14 @@ if (window.freighterApi.isConnected()) {
 function alamat() {
 try {
   publicKey = await window.freighterApi.getPublicKey();
-}
-catch(err) {
-  document.getElementById("alamat").innerHTML = err.message;
-}
+} catch (e) {
+    error = e;
+  }
+  if (error) {
+    return error;
+  }
   return publicKey;
-  document.getElementById("alamat").innerHTML = publicKey; 
-};
+  document.getElementById("alamat").innerHTML = publicKey;
 }
     
     
