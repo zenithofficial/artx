@@ -19,11 +19,13 @@
     function koneksi() {
  
 if (window.freighterApi.isConnected()) {
-  document.getElementById("demo").innerHTML = "Terkoneksi"; 
+  document.getElementById("koneksi").innerHTML = "User has Freighter!""; 
 }
-    }
-	  
-	   function alamat() {
+    } 
+</script>
+
+<script>
+function alamat() {
  
 if (window.freighterApi.isConnected()) {
   const retrievePublicKey = async () => {
@@ -49,7 +51,6 @@ document.getElementById("alamat").innerHTML = result;
 }
     
   }
-    
     
   </script>
 </html>
