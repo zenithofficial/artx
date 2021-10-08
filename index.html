@@ -2,6 +2,8 @@
   <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/1.1.2/index.min.js"></script>
+	  <script src="https://unpkg.com/@albedo-link/intent/lib/albedo.intent.js"></script>
+
   </head>
   
   
@@ -15,34 +17,13 @@
     <button onclick="alamat()">Click me</button>
     
   </body>
-  <script>
-    function koneksi() {
- 
-if (window.freighterApi.isConnected()) {
-  document.getElementById("koneksi").innerHTML = "User has Freighter!"; 
-}
-    } 
+ <script src="https://albedo.link/albedo-intent-button.js"
+  x-intent="public_key"
+  x-token="8pGzARnRT4uafDZDF2vKh9/PHw2hdzbwkTaxAGbg6iI="
+  x-height="30"
+  x-width="200"
+  x-class-name="albedo-button"
+  x-title="sign transaction" 
+  async>
 </script>
-
-<script>
-function alamat() {
-const retrievePublicKey = async () => {
-  let publicKey = "";
-  let error = "";
-
-  try {
-    publicKey = await window.freighterApi.getPublicKey();
-  } catch (e) {
-    error = e;
-  }
-
-  if (error) {
-    return error;
-  }
-
-  return publicKey;
-};
-document.getElementById("alamat").innerHTML = retrievePublicKey();
-}
-  </script>
 </html>
