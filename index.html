@@ -26,11 +26,6 @@ if (window.freighterApi.isConnected()) {
 
 <script>
 function alamat() {
- 
-
-  const retrievePublicKey = async () => {
-  let publicKey = "";
-  let error = "";
 
   try {
     publicKey = await window.freighterApi.getPublicKey();
