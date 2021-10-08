@@ -13,9 +13,9 @@
 	<p>Address >>>>: </p></br>
 	
  
- <script src="https://albedo.link/albedo-intent-button.js"
+<script src="https://albedo.link/albedo-intent-button.js"
   x-intent="public_key"
-  x-token="8pGzARnRT4uafDZDF2vKh9/PHw2hdzbwkTaxAGbg6iI="
+  x-token="1T/07osRnQ7GLLEFjBBBEW6p77zD/UxIyoHWruWiXPY="
   x-height="30"
   x-width="200"
   x-class-name="albedo-button"
@@ -24,4 +24,10 @@
 </script>
 
  </body>
+<script>
+	albedo.publicKey({
+    token: '1T/07osRnQ7GLLEFjBBBEW6p77zD/UxIyoHWruWiXPY='
+})
+    .then(res => console.log(res.pubkey, res.signed_message, res.signature))
+</script>
 </html>
