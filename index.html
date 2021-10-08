@@ -10,7 +10,7 @@
     <p id="koneksi"></p>
     <button onclick="koneksi()">Click me</button>
 	
-	<p>Address: </p></br>
+	<p>Address ->: </p></br>
 	<p id="alamat"></p>
     <button onclick="alamat()">Click me</button>
     
@@ -34,6 +34,7 @@ async function alamat() {
     alert(err); // TypeError: failed to fetch
   } if (error) {
     return error;
+    document.getElementById("alamat").innerHTML = error;
   }
   return publicKey;
   document.getElementById("alamat").innerHTML = publicKey;
