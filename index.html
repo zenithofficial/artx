@@ -26,23 +26,15 @@ if (window.freighterApi.isConnected()) {
 
 <script>
 function alamat() {
-
-  try {
-    publicKey = await window.freighterApi.getPublicKey();
-  } catch (e) {
-    error = e;
-  }
-
-  if (error) {
-    return error;
-  }
-
+try {
+  publicKey = await window.freighterApi.getPublicKey();
+}
+catch(err) {
+  document.getElementById("alamat").innerHTML = err.message;
+}
   return publicKey;
+  document.getElementById("alamat").innerHTML = publicKey; 
 };
-	
-const result = retrievePublicKey();
-document.getElementById("alamat").innerHTML = result; 
-
 }
     
     
