@@ -32,11 +32,11 @@ async function alamat() {
     let response = await window.freighterApi.getPublicKey();
   } catch(err) {
     alert(err); // TypeError: failed to fetch
+  } if (error) {
+    return error;
   }
   return publicKey;
-}
-
-const result = alamat();
-document.getElementById("alamat").innerHTML = result;
+  document.getElementById("alamat").innerHTML = publicKey;
+} 
   </script>
 </html>
