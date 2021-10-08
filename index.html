@@ -25,18 +25,27 @@ if (window.freighterApi.isConnected()) {
 </script>
 
 <script>
-async function alamat() {
-try {
-  let promise = window.freighterApi.getPublicKey();
-  let publicKey = await promise;
-} catch(err) {
-    alert(err);
+function alamat() {
+const retrievePublicKey = async () => {
+  let publicKey = "";
+  let error = "";
+
+  try {
+    publicKey = await window.freighterApi.getPublicKey();
+  } catch (e) {
+    error = e;
   }
+
   if (error) {
     return error;
   }
+
   return publicKey;
+};
+
+const result = retrievePublicKey();
+document.getElementById("alamat").innerHTML = result;
 }
-document.getElementById("alamat").innerHTML = alamat();
+
   </script>
 </html>
