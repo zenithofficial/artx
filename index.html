@@ -10,7 +10,7 @@
     <p id="koneksi"></p>
     <button onclick="koneksi()">Click me</button>
 	
-	<p>Address ->: </p></br>
+	<p>Address >>: </p></br>
 	<p id="alamat"></p>
     <button onclick="alamat()">Click me</button>
     
@@ -26,18 +26,24 @@ if (window.freighterApi.isConnected()) {
 
 <script>
 	
-async function alamat() {
+const retrievePublicKey = async () => {
+  let publicKey = "";
+  let error = "";
 
   try {
-    let response = await window.freighterApi.getPublicKey();
-  } catch(err) {
-    alert(err); // TypeError: failed to fetch
-  } if (error) {
-    return error;
-    document.getElementById("alamat").innerHTML = error;
+    publicKey = await window.freighterApi.getPublicKey();
+  } catch (e) {
+    error = e;
   }
+
+  if (error) {
+    return error;
+  }
+
   return publicKey;
-  document.getElementById("alamat").innerHTML = publicKey;
-} 
+};
+
+const result = retrievePublicKey();
+	document.getElementById("koneksi").innerHTML = result; 
   </script>
 </html>
