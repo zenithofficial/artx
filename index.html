@@ -19,7 +19,7 @@
     function koneksi() {
  
 if (window.freighterApi.isConnected()) {
-  document.getElementById("koneksi").innerHTML = "User has Freighter!""; 
+  document.getElementById("koneksi").innerHTML = "User has Freighter!"; 
 }
     } 
 </script>
@@ -27,7 +27,7 @@ if (window.freighterApi.isConnected()) {
 <script>
 function alamat() {
  
-if (window.freighterApi.isConnected()) {
+
   const retrievePublicKey = async () => {
   let publicKey = "";
   let error = "";
@@ -50,7 +50,6 @@ document.getElementById("alamat").innerHTML = result;
 
 }
     
-  }
     
   </script>
 </html>
