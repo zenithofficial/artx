@@ -13,7 +13,11 @@
   </body>
   <script>
     function myFunction() {
- const retrievePublicKey = async () => {
+ if (window.freighterApi.isConnected()) {
+  alert("User has Freighter!");
+}
+
+const retrievePublicKey = async () => {
   let publicKey = "";
   let error = "";
 
@@ -31,8 +35,7 @@
 };
 
 const result = retrievePublicKey();
-
-document.getElementById("demo").innerHTML = myFunction();
-      }
+	    document.getElementById("demo").innerHTML = result;
+    }
   </script>
 </html>
