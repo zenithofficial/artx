@@ -22,6 +22,20 @@
   x-title="sign transaction" 
   async>
 </script>
+	
+	<script src="https://albedo.link/albedo-intent-button.js"
+  x-intent="exchange"
+  x-amount="1"
+  x-max_price="100"
+  x-sell_asset_code="TEST"
+  x-sell_asset_issuer="GCR3MYAUYFVGI4VXPW5TUNAF2U3QWCLSYHE23Q37ITVUUCOLWTCE7PPQ"
+  x-network="testnet"
+  x-height="30"
+  x-width="200"
+  x-class-name="albedo-button"
+  x-title="sign transaction" 
+  async>
+</script>
 
  </body>
 <script>
@@ -29,5 +43,15 @@
     token: '1T/07osRnQ7GLLEFjBBBEW6p77zD/UxIyoHWruWiXPY='
 })
     .then(res => console.log(res.pubkey, res.signed_message, res.signature))
+</script>
+<script>
+	albedo.exchange({
+    amount: '1',
+    max_price: '100',
+    sell_asset_code: 'TEST',
+    sell_asset_issuer: 'GCR3MYAUYFVGI4VXPW5TUNAF2U3QWCLSYHE23Q37ITVUUCOLWTCE7PPQ',
+    network: 'testnet'
+})
+    .then(res => console.log(res.amount, res.max_price, res.sell_asset_code, res.sell_asset_issuer, res.buy_asset_code, res.buy_asset_issuer, res.tx_hash, res.signed_envelope_xdr, res.pubkey, res.network, res.result))
 </script>
 </html>
