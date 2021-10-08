@@ -6,18 +6,49 @@
   
   
   <body>
-	  <p>My Wallet: </p></br>
-    <p id="demo"></p>
-    <button onclick="myFunction()">Click me</button>
+	  <p>Status: </p></br>
+    <p id="koneksi"></p>
+    <button onclick="koneksi()">Click me</button>
+	
+	<p>Address: </p></br>
+	<p id="alamat"></p>
+    <button onclick="alamat()">Click me</button>
     
   </body>
   <script>
-    function myFunction() {
+    function koneksi() {
  
 if (window.freighterApi.isConnected()) {
   document.getElementById("demo").innerHTML = "Terkoneksi"; 
 }
     }
+	  
+	   function alamat() {
+ 
+if (window.freighterApi.isConnected()) {
+  const retrievePublicKey = async () => {
+  let publicKey = "";
+  let error = "";
+
+  try {
+    publicKey = await window.freighterApi.getPublicKey();
+  } catch (e) {
+    error = e;
+  }
+
+  if (error) {
+    return error;
+  }
+
+  return publicKey;
+};
+	
+const result = retrievePublicKey();
+document.getElementById("alamat").innerHTML = result; 
+
+}
+    
+  }
     
     
   </script>
