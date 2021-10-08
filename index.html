@@ -16,28 +16,11 @@
  
 if (window.freighterApi.isConnected()) {
   
-const retrievePublicKey = async () => {
-  let publicKey = "";
-  let error = "";
 
-  try {
-    publicKey = await window.freighterApi.getPublicKey();
-  } catch (e) {
-    error = e;
-  }
-
-  if (error) {
-    return error;
-  }
-
-  return publicKey;
-};
-
-const result = retrievePublicKey();
-	document.getElementById("demo").innerHTML = result;
+	document.getElementById("demo").innerHTML = "Terkoneksi";
 	 
 }
-    }
+    
     
   </script>
 </html>
