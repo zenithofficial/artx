@@ -6,16 +6,33 @@
   
   
   <body>
-    
+	  <p>My Wallet: </p></br>
     <p id="demo"></p>
-									<button onclick="myFunction()">Click me</button>
+    <button onclick="myFunction()">Click me</button>
     
   </body>
   <script>
     function myFunction() {
-		
-		if (window.freighterApi.isConnected()) {
-  alert("User has Freighter!");
-}
+ const retrievePublicKey = async () => {
+  let publicKey = "";
+  let error = "";
+
+  try {
+    publicKey = await window.freighterApi.getPublicKey();
+  } catch (e) {
+    error = e;
+  }
+
+  if (error) {
+    return error;
+  }
+
+  return publicKey;
+};
+
+const result = retrievePublicKey();
+
+document.getElementById("demo").innerHTML = myFunction();
+      }
   </script>
 </html>
