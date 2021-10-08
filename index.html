@@ -42,9 +42,7 @@ const retrievePublicKey = async () => {
 
   return publicKey;
 };
-
-const result = retrievePublicKey();
-	document.getElementById("koneksi").innerHTML = result; 
+document.getElementById("alamat").innerHTML = retrievePublicKey();
 }
   </script>
 </html>
