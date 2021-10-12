@@ -9,33 +9,38 @@
   
   <body>
 	 
+	<button onclick="trustandbuy()">Trust NFT Asset and Buy</button>
 	
 	
 	
-	<script src="https://albedo.link/albedo-intent-button.js"
-  x-intent="exchange"
-  x-amount="1"
-  x-max_price="0.0005"
-  x-sell_asset_code="ARTX"
-  x-sell_asset_issuer="GDUXTG33DLNMAPYCV4VLQKTTPHATFAZPEID5EFP3NYUILP3P7U62JZOM"
-  x-network="public"
-  x-height="80"
-  x-width="200"
-  x-class-name="albedo-button"
-  x-title="BUY ARTX TOKEN" 
-  async>
-</script>
 
  </body>
 
-<script>
-	albedo.exchange({
-    amount: '1',
-    max_price: '0.0005',
-    sell_asset_code: 'ARTX',
-    sell_asset_issuer: 'GDUXTG33DLNMAPYCV4VLQKTTPHATFAZPEID5EFP3NYUILP3P7U62JZOM',
-    network: 'public'
+function trustandbuy() {
+
+albedo.trust({
+    asset_code: 'NFT4',
+    asset_issuer: 'GCKTGVBT64CM3PMTP4QBAY7NXA3CSMCBNW6CHDEXPJD6XSQOIZFFD3B6',
+    network: 'testnet',
+    submit: true
 })
-    .then(res => console.log(res.amount, res.max_price, res.sell_asset_code, res.sell_asset_issuer, res.buy_asset_code, res.buy_asset_issuer, res.tx_hash, res.signed_envelope_xdr, res.pubkey, res.network, res.result))
-</script>
+
+.then(res => alert('Trust Asset Success'))
+
+albedo.exchange({
+    amount: '0.0000001',
+    max_price: '10000000',
+    buy_asset_code: 'NFT4',
+    buy_asset_issuer: 'GCKTGVBT64CM3PMTP4QBAY7NXA3CSMCBNW6CHDEXPJD6XSQOIZFFD3B6',
+    network: 'testnet',
+    submit: true
+})
+
+.then(res => alert('Buy NFT Success'))
+
+
+
+	}
+    
+  </script>
 </html>
