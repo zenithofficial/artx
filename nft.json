@@ -1,0 +1,25 @@
+{ "NFT": {
+  "Sell": [ 
+         	  { "Asset_code":"artone1",
+  "Issuer_address": "GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P",
+  "Friendly_name": "FIRE",
+  "Icon_url": "https://ipfs.io/ipfs/QmNtLJDmXFe9d2g2J3VoJizBWw4jKRk6aKtGgHuQsWyZpY"
+         	  },
+         	  { "Asset_code":"artone1",
+  "Issuer_address": "GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P",
+  "Friendly_name": "FIRE",
+  "Icon_url": "https://ipfs.io/ipfs/QmNtLJDmXFe9d2g2J3VoJizBWw4jKRk6aKtGgHuQsWyZpY"
+         	  },
+         	  { "Asset_code":"artone1",
+  "Issuer_address": "GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P",
+  "Friendly_name": "FIRE",
+  "Icon_url": "https://ipfs.io/ipfs/QmNtLJDmXFe9d2g2J3VoJizBWw4jKRk6aKtGgHuQsWyZpY"
+         	  },
+         	 { "Asset_code":"artone1",
+  "Issuer_address": "GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P",
+  "Friendly_name": "FIRE",
+  "Icon_url": "https://ipfs.io/ipfs/QmNtLJDmXFe9d2g2J3VoJizBWw4jKRk6aKtGgHuQsWyZpY"
+         	  }
+         	  ]
+         	  }
+         	  }
