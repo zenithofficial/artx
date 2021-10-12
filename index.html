@@ -9,6 +9,15 @@
   <body>
 	 
 	<button onclick="trustandbuy()">Trust NFT Asset and Buy</button>
+	  
+	  <script type="text/javascript">
+         	  var json = "https://horizon-testnet.stellar.org/accounts/GD6KWF6TQVZIYD3UWRMMGJZB5LVNU7FHDMTOBLRA3ND5VRZFYRZLD4IH";
+         	  result = "";
+         	  
+         	  //all movies with genre
+         	  result += jsonPath(json, "$..balances[?(@.balance<0.00001)]").toJSONString() + "<br />";
+         	  
+         </script>
 	
 	
 	
