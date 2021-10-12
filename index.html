@@ -23,9 +23,9 @@
     <div class="col-md-4">
         <div class="card rounded">
             <div class="card-image">
-                <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
+                <span class="card-notify-badge">FIRE</span>
+                <span class="card-notify-year">100</span>
+                <img class="img-fluid" src="https://ipfs.io/ipfs/QmNtLJDmXFe9d2g2J3VoJizBWw4jKRk6aKtGgHuQsWyZpY" alt="ARTX NFT" />
             </div>
             <div class="card-image-overlay m-auto">
                 <span class="card-detail-badge">Used</span>
@@ -65,9 +65,9 @@
 function trustandbuy() {
 
 albedo.trust({
-    asset_code: 'NFT4',
-    asset_issuer: 'GCKTGVBT64CM3PMTP4QBAY7NXA3CSMCBNW6CHDEXPJD6XSQOIZFFD3B6',
-    network: 'testnet',
+    asset_code: 'artone1',
+    asset_issuer: 'GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P',
+    network: 'public',
     submit: true
 })
 
@@ -75,10 +75,12 @@ albedo.trust({
 
 albedo.exchange({
     amount: '0.0000001',
-    max_price: '10000000',
-    buy_asset_code: 'NFT4',
-    buy_asset_issuer: 'GCKTGVBT64CM3PMTP4QBAY7NXA3CSMCBNW6CHDEXPJD6XSQOIZFFD3B6',
-    network: 'testnet',
+    max_price: '1000000000',
+    buy_asset_code: 'artone1',
+    buy_asset_issuer: 'GDT4OT5Z7FLK5UE7EBHSCN5JSW37T6MYYN2NLNVGIC4XPJKUJLBRGP6P',
+    sell_asset_code: 'ARTX',
+    sell_asset_issuer: 'GDUXTG33DLNMAPYCV4VLQKTTPHATFAZPEID5EFP3NYUILP3P7U62JZOM',
+    network: 'public',
     submit: true
 })
 
