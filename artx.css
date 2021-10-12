@@ -101,3 +101,11 @@ body {
         text-transform: uppercase;
         font-size: 18px;
     }
+
+
+.social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
